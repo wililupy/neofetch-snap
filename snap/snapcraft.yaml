@@ -1,0 +1,23 @@
+name: neofetch-snap
+base: core20 
+version: '7.1.0'
+summary: Displays information about your OS, software and hardware.
+description: |
+   Neofetch displays information about your operating system, software 
+   and hardware in an aesthetic and visually pleasing way.
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+parts:
+  build:
+    plugin: make
+    source: https://github.com/dylanaraps/neofetch.git
+    source-type: git
+    stage-packages:
+      - chafa
+
+apps:
+  neofetch:
+    command: usr/bin/neofetch
+    # plugs:
+
