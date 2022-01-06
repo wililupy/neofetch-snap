@@ -19,5 +19,23 @@ parts:
 apps:
   neofetch:
     command: usr/bin/neofetch
-    # plugs:
+    plugs:
+      - avahi-observe
+      - block-devices
+      - dbus
+      - log-observe
+      - network-manager-observe
+      - process-control
+      - hardware-observe
+      - kernel-module-observe
+      - mount-observe
+      - network-observe
+      - network-setup-observe
+      - network-status
+      - physical-memory-observe
+      - system-observe
+      - system-trace
+      - spi
+      - upower-observe
+
 
